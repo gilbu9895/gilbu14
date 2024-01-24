@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Registration form</title>
+
+    <style>
+        .contain {
+            border: 1px solid black;
+            background-color: aqua;
+            border-radius : 5px;
+            box-sizing : border-box;
+            padding : 35px;
+            border-bottom :100%;
+            text-align: center;
+
+
+            }
+
+    </style>
+</head>
+<body style="background-color : aqua;">
+<div class="contain" >
+<h1>REGISTRATION FORM</h1>
+
+<form action="register" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username" style="background-color: lime;"><br>
+    <!--<input type="text" name="first_name" placeholder="enter your first name" style="background-color: lime;"><br>
+    <input type="text" name="last_name" placeholder="enter your last name" style="background-color: lime;"><br>
+    <input type="email" name="email" placeholder="enter your mail id" style="background-color: lime;"><br>-->
+    <input type="password" name="password" placeholder="enter your password" style="background-color: lime;"><br>
+    <input type="password" name="password1" placeholder="confirm your password" style="background-color: lime;"><br>
+    <a href="login.html">
+    <input type="submit" style="background-color: red;">
+    </a>
+
+</form>
+    <p>Already have an account? <a href="login">Login Here</a></p>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+
+    </div>
+
+</body>
+</html>

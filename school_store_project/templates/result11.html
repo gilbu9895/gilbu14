@@ -1,0 +1,239 @@
+<!-- form page il ulla html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+</style>
+    <title>Form Page</title>
+</head>
+<body style="text-align: center; background-color: pink;" >
+    <h2>Form Page</h2>
+
+<div class="form">
+    <form action="#" method="post">
+
+
+        <input type="text" id="name" name="name" placeholder="Enter Your Name"><br>
+        <input type="date" id="dob" name="dob" placeholder="DOB"><br>
+        <input type="number" id="age" name="age" PLACEHOLDER="Your Age "><br>
+
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+            <!-- Add more gender options if needed -->
+        </select><br>
+
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+        <input type="email" id="email" name="email" placeholder="Enter Mail"><br>
+        <textarea id="address" name="address" rows="4" placeholder="Address"></textarea><br>
+
+
+        <div class="dropdown">
+
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Departments
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+
+        <!--<li><a tabindex="-1" href="#">Computer Science</a></li>
+      <li><a tabindex="-1" href="#">Maths</a></li>-->
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Computer Science <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li class="dropdown-submenu" >
+           <a class="test" href="#">BSC <!--<span class="caret"></span>--></a>
+             <a class="test" href="#">AI <!--<span class="caret"></span>--></a>
+             <a class="test" href="#">Data Science</a>
+             <a class="test" href="#">Algorithms</a>
+             </li>
+         </ul>
+
+        <a class="test" tabindex="-1" href="#">Maths <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li class="dropdown-submenu">
+           <a class="test" href="#">Statistics </a>
+             <a class="test" href="#">Accounting </a>
+             <a class="test" href="#">Mathematics </a>
+             <a class="test" href="#">Finance </a>
+             </li>
+         </ul>
+        <a class="test" tabindex="-1" href="#">Economic<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li class="dropdown-submenu">
+           <a class="test" href="#">Bsc Economics </a>
+             <a class="test" href="#">Business Economics</a>
+             <a class="test" href="#">Economics Researcher </a>
+             <a class="test" href="#">MA </a>
+             </li>
+         </ul>
+        <a class="test" tabindex="-1" href="#">Commerce <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li class="dropdown-submenu">
+           <a class="test" href="#">Bachelor of Commerce</a>
+             <a class="test" href="#">BBA </a>
+             <a class="test" href="#">CA </a>
+             <a class="test" href="#">Digital Marketing </a>
+
+             </li>
+         </ul>
+        <a class="test" tabindex="-1" href="#">Humanities <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li class="dropdown-submenu">
+           <a class="test" href="#">Sociology </a>
+             <a class="test" href="#">Geography </a>
+             <a class="test" href="#">Social Work</a>
+             <a class="test" href="#">BA Psychology </a>
+
+
+             </li>
+         </ul>
+
+         </li>
+        </ul>
+    </div>
+
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="purpose" required>
+            <option value="enquiry">For Enquiry</option>
+            <option value="place order">Place Order</option>
+            <option value="return">Return</option>
+            <!-- Add more purpose options if needed -->
+        </select><br>
+
+        <label>Materials Provide:</label>
+        <input type="checkbox" id="notebook" name="materials" value="notebook">
+        <label for="notebook">Notebook</label>
+        <input type="checkbox" id="pen" name="materials" value="pen">
+        <label for="pen">Pen</label>
+        <input type="checkbox" id="exam_papers" name="materials" value="exam_papers">
+        <label for="exam_papers">Exam Papers</label>
+        <input type="checkbox" id="marker" name="materials" value="marker">
+        <label for="marker">Marker</label>
+
+    </form>
+    </div>
+
+
+    <a href="confirm"><button type="submit" style="color: blue;">Submit</button></a>
+    <!--<a href="new_page">Return to New Page</a>-->
+    <a href="logout"><button> Logout</button></a>
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+</body>
+</html>
+                                  NEXT SECTIONS .HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
+
+    <title>Form Page</title>
+</head>
+<body style="text-align: center; background-color: pink;" >
+    <h2>Form Page</h2>
+
+<div class="form">
+    <form action="#" method="post">
+
+
+        <input type="text" id="name" name="name" placeholder="Enter Your Name"><br>
+        <input type="date" id="dob" name="dob" placeholder="DOB"><br>
+        <input type="number" id="age" name="age" PLACEHOLDER="Your Age "><br>
+
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+            <!-- Add more gender options if needed -->
+        </select><br>
+
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+        <input type="email" id="email" name="email" placeholder="Enter Mail"><br>
+        <textarea id="address" name="address" rows="4" placeholder="Address"></textarea><br>
+
+    <select id="department" name="department" onchange="populateCourses()">
+
+
+
+
+            <option value="commerce">Commerce</option>
+            <option value="maths">Maths</option>
+            <option value="computer science">Computer Science</option>
+            <option value="economics">Economics</option>
+            <option value="humanities">Humanities</option>
+            <!-- Add more department options if needed -->
+        </select><br>
+
+        <label for="course">Courses:</label>
+        <select id="courses" name="courses" required>
+            <option value="bcs">Bcs</option>
+            <option value="bsc">Bsc</option>
+            <option value="ca">Ca</option>
+            <option value="cwa">Cwa</option>
+            <option value="css">Css</option>
+            <option value="bcom">Bcom</option>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>-->
+            <!-- Courses will be dynamically populated based on selected department -->
+        </select><br>
+
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="purpose" required>
+            <option value="enquiry">For Enquiry</option>
+            <option value="place order">Place Order</option>
+            <option value="return">Return</option>
+            <!-- Add more purpose options if needed -->
+        </select><br>
+
+        <label>Materials Provide:</label>
+        <input type="checkbox" id="notebook" name="materials" value="notebook">
+        <label for="notebook">Notebook</label>
+        <input type="checkbox" id="pen" name="materials" value="pen">
+        <label for="pen">Pen</label>
+        <input type="checkbox" id="exam_papers" name="materials" value="exam_papers">
+        <label for="exam_papers">Exam Papers</label>
+        <input type="checkbox" id="marker" name="materials" value="marker">
+        <label for="marker">Marker</label>
+
+    </form>
+    </div>
+
+
+    <a href="confirm"><button type="submit" style="color: blue;">Submit</button></a>
+    <!--<a href="new_page">Return to New Page</a>-->
+    <a href="logout"><button> Logout</button></a>
+
+
+</body>
+</html>

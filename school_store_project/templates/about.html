@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>welcome to about us page is loading.....</h1>
+</body>
+</html>
+#  login.html #
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        .logins {text-align:center;}
+
+    </style>
+</head>
+<body>
+<form action="login" method="post">
+  {% csrf_token %}
+<div class="logins">
+    <h1>LOGIN PAGE</h1>
+        <input type="text" name="username" placeholder="Username" style="background-color: aqua;"><br>
+        <input type="password" name="password" placeholder="enter your password" style="background-color: aqua;"><br>
+        <input type="submit" style="background-color:red;">
+</div>
+    <a href="register/"><button type="submit" >Register</button></a>
+</form>
+
+    <!--<p>Don't have an account? <a href="register.html">Register Here</a> </p>-->
+</body>
+</html>
+
+# register #
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Registration form</title>
+
+    <style>
+        .contain {
+            border: 1px solid black;
+            background-color: aqua;
+            border-radius : 5px;
+            box-sizing : border-box;
+            padding : 35px;
+            border-bottom :100%;
+            text-align: center;
+
+
+            }
+
+    </style>
+</head>
+<body>
+<div class="contain">
+<h1>REGISTRATION FORM</h1>
+
+<form action="register" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username" style="background-color: lime;"><br>
+    <!--<input type="text" name="first_name" placeholder="enter your first name" style="background-color: lime;"><br>
+    <input type="text" name="last_name" placeholder="enter your last name" style="background-color: lime;"><br>
+    <input type="email" name="email" placeholder="enter your mail id" style="background-color: lime;"><br>-->
+    <input type="password" name="password" placeholder="enter your password" style="background-color: lime;"><br>
+    <input type="password" name="password1" placeholder="confirm your password" style="background-color: lime;"><br>
+    <input type="submit"style="background-color: red;">
+
+</form>
+    <p>Already have an account? <a href="login.html">Login Here</a></p>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+
+    </div>
+
+</body>
+</html>
